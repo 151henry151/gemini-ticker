@@ -2,6 +2,7 @@
 
 gprice="https://api.gemini.com/v1/pubticker/btcusd"
 tput civis
+tput bold
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 cyan=$(tput setaf 6)
