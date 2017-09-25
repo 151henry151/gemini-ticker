@@ -4,6 +4,7 @@ gprice="https://api.gemini.com/v1/pubticker/btcusd"
 gethprice="https://api.gemini.com/v1/pubticker/ethusd"
 tput bold
 tput civis
+tput bold
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 cyan=$(tput setaf 6)
