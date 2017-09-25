@@ -30,8 +30,9 @@ while true; do
 	fi
 	printf "Gemini ETHUSD:\\n"
 	printf "\$""${last//\"/}"	
+
 	sleep 3 
-	clear
+        tput cup 0 0 	
 	prev2=$cmp2
         prev=$cmp	
 	
