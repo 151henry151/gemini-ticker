@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 gprice="https://api.gemini.com/v1/pubticker/btcusd"
 gethprice="https://api.gemini.com/v1/pubticker/ethusd"
 tput bold
@@ -9,6 +9,7 @@ green=$(tput setaf 2)
 cyan=$(tput setaf 6)
 while true; do
 
+	tput cup 0 0	
 	read last < <(curl "$gprice" 2> /dev/null | jshon -e last) 
 	cmp=${last//[\".]} 
 	if (( prev == cmp ))  
@@ -31,8 +32,7 @@ while true; do
 	printf "Gemini ETHUSD:\\n"
 	printf "\$""${last//\"/}"	
 
-	sleep 3 
-        tput cup 0 0 	
+	sleep 3  	
 	prev2=$cmp2
         prev=$cmp	
 	
